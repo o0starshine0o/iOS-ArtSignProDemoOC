@@ -1,11 +1,11 @@
 PODS:
   - Alamofire (4.2.0)
-  - ArtSignProSdk (0.0.5):
+  - ArtSignProSdk (0.0.6):
     - Alamofire
-    - ArtSignProSdk/Alipay (= 0.0.5)
-    - ArtSignProSdk/Core (= 0.0.5)
-    - ArtSignProSdk/Pay (= 0.0.5)
-    - ArtSignProSdk/WeChat (= 0.0.5)
+    - ArtSignProSdk/Alipay (= 0.0.6)
+    - ArtSignProSdk/Core (= 0.0.6)
+    - ArtSignProSdk/Pay (= 0.0.6)
+    - ArtSignProSdk/WeChat (= 0.0.6)
     - AutoLayoutTextViews
     - CryptoSwift
     - EZSwiftExtensions
@@ -15,19 +15,7 @@ PODS:
     - SwiftSpinner
     - SwiftyJSON
     - Toast-Swift
-  - ArtSignProSdk/Alipay (0.0.5):
-    - Alamofire
-    - ArtSignProSdk/Pay
-    - AutoLayoutTextViews
-    - CryptoSwift
-    - EZSwiftExtensions
-    - IQKeyboardManager
-    - Kingfisher
-    - M13Checkbox
-    - SwiftSpinner
-    - SwiftyJSON
-    - Toast-Swift
-  - ArtSignProSdk/Core (0.0.5):
+  - ArtSignProSdk/Alipay (0.0.6):
     - Alamofire
     - ArtSignProSdk/Pay
     - AutoLayoutTextViews
@@ -39,7 +27,19 @@ PODS:
     - SwiftSpinner
     - SwiftyJSON
     - Toast-Swift
-  - ArtSignProSdk/Pay (0.0.5):
+  - ArtSignProSdk/Core (0.0.6):
+    - Alamofire
+    - ArtSignProSdk/Pay
+    - AutoLayoutTextViews
+    - CryptoSwift
+    - EZSwiftExtensions
+    - IQKeyboardManager
+    - Kingfisher
+    - M13Checkbox
+    - SwiftSpinner
+    - SwiftyJSON
+    - Toast-Swift
+  - ArtSignProSdk/Pay (0.0.6):
     - Alamofire
     - AutoLayoutTextViews
     - CryptoSwift
@@ -50,7 +50,7 @@ PODS:
     - SwiftSpinner
     - SwiftyJSON
     - Toast-Swift
-  - ArtSignProSdk/WeChat (0.0.5):
+  - ArtSignProSdk/WeChat (0.0.6):
     - Alamofire
     - ArtSignProSdk/Pay
     - AutoLayoutTextViews
@@ -73,15 +73,11 @@ PODS:
   - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
-  - ArtSignProSdk (from `../ArtSignPro-Sdk`)
-
-EXTERNAL SOURCES:
-  ArtSignProSdk:
-    :path: ../ArtSignPro-Sdk
+  - ArtSignProSdk
 
 SPEC CHECKSUMS:
   Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
-  ArtSignProSdk: 595e900f27add6f2ba84dbb184078d8849afdd3c
+  ArtSignProSdk: 3d9c127b21e49fb170a865724e05234bfefed2b2
   AutoLayoutTextViews: 6cc6e52141399590f30dca9f04bb6f603c1f47d5
   CryptoSwift: 88592381b73f36e192124539390a7c9bacda76af
   EZSwiftExtensions: 4afef248066a036903d8496bf07bc355b22ce766
@@ -92,6 +88,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 86cb5ced2b9c9ede5c68b4ffcef99acb2d7fe45e
+PODFILE CHECKSUM: 1d1587ded2a51062e14a8e05e4e0d1988f929f18
 
 COCOAPODS: 1.2.0.beta.1

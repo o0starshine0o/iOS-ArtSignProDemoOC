@@ -26,7 +26,13 @@ bool isShowSdk = false;
 }
 - (IBAction)onClick:(UIButton *)sender {
     if (isShowSdk) {
-        [self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
+        // if you use storyboard , you can show ArtSignPro with the follow code
+//        [self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
+        // if you don't use storyboard , you can show ArtSignPro with the follow code
+        NSBundle * artSignProBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ArtSignProSdk"];
+        UIStoryboard * artSignProStoryBoard = [UIStoryboard storyboardWithName:@"ArtSignPro" bundle:artSignProBundle];
+        UIViewController * viewController =  [artSignProStoryBoard instantiateViewControllerWithIdentifier:@"ExpertSignListViewController"];
+        [self showViewController:viewController sender:self];
     }else{
         NSLog(@"set pay method for this production before show expert sign list");
     }

@@ -182,10 +182,25 @@ isShowSdk = show;
 @end
 ```
 when some event happend eg:click,to show expert sign list or not
+(this example is for storyboard)
 ```Objective-C
 - (IBAction)onClick:(UIButton *)sender {
 if (isShowSdk) {
 [self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
+}else{
+NSLog(@"set pay method for this production before show expert sign list");
+}
+}
+```
+when some event happend eg:click,to show expert sign list or not
+(this example is for code)
+```Objective-C
+- (IBAction)onClick:(UIButton *)sender {
+if (isShowSdk) {
+NSBundle * artSignProBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ArtSignProSdk"];
+UIStoryboard * artSignProStoryBoard = [UIStoryboard storyboardWithName:@"ArtSignPro" bundle:artSignProBundle];
+UIViewController * viewController =  [artSignProStoryBoard instantiateViewControllerWithIdentifier:@"ExpertSignListViewController"];
+[self showViewController:viewController sender:self];
 }else{
 NSLog(@"set pay method for this production before show expert sign list");
 }
