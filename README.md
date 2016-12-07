@@ -115,12 +115,12 @@ $ pod install
 
 ```Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_XXX" secret:@"secret_XXX" scheme:@"ArtSignProSdkDemoOC"];
-[self.artsignpro setEnvironmentWithEnvironment:EnvironmentTypeTest];
+    self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_XXX" secret:@"secret_XXX" scheme:@"ArtSignProSdkDemoOC"];
+    [self.artsignpro setEnvironmentWithEnvironment:EnvironmentTypeTest];
 
-···
+    ···
 
-return YES;
+    return YES;
 }
 ```
 > 1. the key and secret in [Prepare][3]
@@ -133,7 +133,7 @@ return YES;
 
 ```Objective-C
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL*)url {
-return [self.artsignpro handleOpenWithUrl:url];
+    return [self.artsignpro handleOpenWithUrl:url];
 }
 ```
 
@@ -160,11 +160,11 @@ import ArtSignProSdk
 import ArtSignProSdk
 
 override func viewDidLoad() {
-[super viewDidLoad];
-self.delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-[self.delegate.artsignpro isShowSdkWithDelegate:self];
+    [super viewDidLoad];
+    self.delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [self.delegate.artsignpro isShowSdkWithDelegate:self];
 
-···
+    ···
 }
 ```
 implement ArtSignProSdkDelegate
@@ -174,7 +174,7 @@ implement ArtSignProSdkDelegate
 bool isShowSdk = false;
 
 -(void)isShowSdkWithShow:(BOOL)show{
-isShowSdk = show;
+    isShowSdk = show;
 }
 
 ···
@@ -185,25 +185,25 @@ when some event happend eg:click,to show expert sign list or not
 (this example is for storyboard)
 ```Objective-C
 - (IBAction)onClick:(UIButton *)sender {
-if (isShowSdk) {
-[self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
-}else{
-NSLog(@"set pay method for this production before show expert sign list");
-}
+    if (isShowSdk) {
+        [self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
+    }else{
+        NSLog(@"set pay method for this production before show expert sign list");
+    }
 }
 ```
 when some event happend eg:click,to show expert sign list or not
 (this example is for code)
 ```Objective-C
 - (IBAction)onClick:(UIButton *)sender {
-if (isShowSdk) {
-NSBundle * artSignProBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ArtSignProSdk"];
-UIStoryboard * artSignProStoryBoard = [UIStoryboard storyboardWithName:@"ArtSignPro" bundle:artSignProBundle];
-UIViewController * viewController =  [artSignProStoryBoard instantiateViewControllerWithIdentifier:@"ExpertSignListViewController"];
-[self showViewController:viewController sender:self];
-}else{
-NSLog(@"set pay method for this production before show expert sign list");
-}
+    if (isShowSdk) {
+        NSBundle * artSignProBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ArtSignProSdk"];
+        UIStoryboard * artSignProStoryBoard = [UIStoryboard storyboardWithName:@"ArtSignPro" bundle:artSignProBundle];
+        UIViewController * viewController =  [artSignProStoryBoard instantiateViewControllerWithIdentifier:@"ExpertSignListViewController"];
+        [self showViewController:viewController sender:self];
+    }else{
+        NSLog(@"set pay method for this production before show expert sign list");
+    }
 }
 ```
 
