@@ -14,8 +14,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_XXX" secret:@"secret_XXX" scheme:@"ArtSignProSdkDemoOC"];
-    self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_c219bbde461c49c52f847e19149d784d" secret:@"secret_a6a05183fc1e92f0a5fdb13f0a14cef5" scheme:@"ArtSignProSdkDemoOC"];
     [self.artsignpro setEnvironmentWithEnvironment:EnvironmentTypeTest];
+    [self.artsignpro setPanWidthWithWidth:10];
     return YES;
 }
 
