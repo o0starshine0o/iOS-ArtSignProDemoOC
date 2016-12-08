@@ -274,5 +274,5 @@ return UIInterfaceOrientationMaskAllButUpsideDown;
 [1]: http://business.test.qima.tech/
 [2]: http://business.qima.tech/
 [3]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC#prepare
-[4]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC#For%20Portrait%20Only
+[4]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC#for-portrait-only
 [5]: http://cocoapods.org
