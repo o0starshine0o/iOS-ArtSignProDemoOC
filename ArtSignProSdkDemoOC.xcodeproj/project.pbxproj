@@ -14,6 +14,8 @@
 		ED14E4311DF54F920032491E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14E42F1DF54F920032491E /* Main.storyboard */; };
 		ED14E4331DF54F920032491E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED14E4321DF54F920032491E /* Assets.xcassets */; };
 		ED14E4361DF54F920032491E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED14E4341DF54F920032491E /* LaunchScreen.storyboard */; };
+		EDD6AF701DF929CE00D3F1EB /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD6AF6F1DF929CE00D3F1EB /* NavigationViewController.m */; };
+		EDD6AF721DF92BEA00D3F1EB /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = EDD6AF711DF92BEA00D3F1EB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,9 @@
 		ED14E4351DF54F920032491E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED14E4371DF54F920032491E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED92D7C51DF66F010088FEB7 /* ArtSignProSdk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArtSignProSdk.framework; path = "Pods/../build/Debug-iphoneos/ArtSignProSdk/ArtSignProSdk.framework"; sourceTree = "<group>"; };
+		EDD6AF6E1DF929CE00D3F1EB /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		EDD6AF6F1DF929CE00D3F1EB /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		EDD6AF711DF92BEA00D3F1EB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +71,7 @@
 		ED14E41A1DF54F920032491E = {
 			isa = PBXGroup;
 			children = (
+				EDD6AF711DF92BEA00D3F1EB /* README.md */,
 				ED14E4251DF54F920032491E /* ArtSignProSdkDemoOC */,
 				ED14E4241DF54F920032491E /* Products */,
 				45E21D17C6D7DD62C29C74F9 /* Pods */,
@@ -93,6 +99,8 @@
 				ED14E4341DF54F920032491E /* LaunchScreen.storyboard */,
 				ED14E4371DF54F920032491E /* Info.plist */,
 				ED14E4261DF54F920032491E /* Supporting Files */,
+				EDD6AF6E1DF929CE00D3F1EB /* NavigationViewController.h */,
+				EDD6AF6F1DF929CE00D3F1EB /* NavigationViewController.m */,
 			);
 			path = ArtSignProSdkDemoOC;
 			sourceTree = "<group>";
@@ -229,7 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDD6AF701DF929CE00D3F1EB /* NavigationViewController.m in Sources */,
 				ED14E42E1DF54F920032491E /* ViewController.m in Sources */,
+				EDD6AF721DF92BEA00D3F1EB /* README.md in Sources */,
 				ED14E42B1DF54F920032491E /* AppDelegate.m in Sources */,
 				ED14E4281DF54F920032491E /* main.m in Sources */,
 			);

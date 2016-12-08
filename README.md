@@ -1,4 +1,4 @@
-![ArtSignProDemoOC:The demo for ArtSignProSdk](https://github.com/o0starshine0o/iOS-ArtSignProDemoOC/raw/master/doc/icon.png)
+![ArtSignProDemoOC:The demo for ArtSignProSdk][0]
 
 Fill your app with expert sign and share the order amount.
 
@@ -8,7 +8,7 @@ Fill your app with expert sign and share the order amount.
 
 ### CocoaPods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+[CocoaPods][5] is a dependency manager for Cocoa projects. You can install it with the following command:
 
 ```bash
 $ gem install cocoapods
@@ -95,6 +95,11 @@ $ pod install
 </dict>
 ```
 
+#### 4.Target > support Landspace
+In your **Target>General>Deployment Info>Device Orientaion** , select both **Landspace Left** and **Landspace Right**
+
+>If your app do not support landspace , please read [For Portrait Only][4]
+
 #### 4.AppDelegate.h > Import ArtSignProSdk , define variable
 
 ```Objective-C
@@ -115,12 +120,12 @@ $ pod install
 
 ```Objective-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_XXX" secret:@"secret_XXX" scheme:@"ArtSignProSdkDemoOC"];
-    [self.artsignpro setEnvironmentWithEnvironment:EnvironmentTypeTest];
+self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_XXX" secret:@"secret_XXX" scheme:@"ArtSignProSdkDemoOC"];
+[self.artsignpro setEnvironmentWithEnvironment:EnvironmentTypeTest];
 
-    ···
+···
 
-    return YES;
+return YES;
 }
 ```
 > 1. the key and secret in [Prepare][3]
@@ -133,7 +138,7 @@ $ pod install
 
 ```Objective-C
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL*)url {
-    return [self.artsignpro handleOpenWithUrl:url];
+return [self.artsignpro handleOpenWithUrl:url];
 }
 ```
 
@@ -160,11 +165,11 @@ import ArtSignProSdk
 import ArtSignProSdk
 
 override func viewDidLoad() {
-    [super viewDidLoad];
-    self.delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [self.delegate.artsignpro isShowSdkWithDelegate:self];
+[super viewDidLoad];
+self.delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
+[self.delegate.artsignpro isShowSdkWithDelegate:self];
 
-    ···
+···
 }
 ```
 implement ArtSignProSdkDelegate
@@ -174,7 +179,7 @@ implement ArtSignProSdkDelegate
 bool isShowSdk = false;
 
 -(void)isShowSdkWithShow:(BOOL)show{
-    isShowSdk = show;
+isShowSdk = show;
 }
 
 ···
@@ -185,25 +190,25 @@ when some event happend eg:click,to show expert sign list or not
 (this example is for storyboard)
 ```Objective-C
 - (IBAction)onClick:(UIButton *)sender {
-    if (isShowSdk) {
-        [self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
-    }else{
-        NSLog(@"set pay method for this production before show expert sign list");
-    }
+if (isShowSdk) {
+[self performSegueWithIdentifier:@"ShowExpertSignList" sender:self];
+}else{
+NSLog(@"set pay method for this production before show expert sign list");
+}
 }
 ```
 when some event happend eg:click,to show expert sign list or not
 (this example is for code)
 ```Objective-C
 - (IBAction)onClick:(UIButton *)sender {
-    if (isShowSdk) {
-        NSBundle * artSignProBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ArtSignProSdk"];
-        UIStoryboard * artSignProStoryBoard = [UIStoryboard storyboardWithName:@"ArtSignPro" bundle:artSignProBundle];
-        UIViewController * viewController =  [artSignProStoryBoard instantiateViewControllerWithIdentifier:@"ExpertSignListViewController"];
-        [self showViewController:viewController sender:self];
-    }else{
-        NSLog(@"set pay method for this production before show expert sign list");
-    }
+if (isShowSdk) {
+NSBundle * artSignProBundle = [NSBundle bundleWithIdentifier:@"org.cocoapods.ArtSignProSdk"];
+UIStoryboard * artSignProStoryBoard = [UIStoryboard storyboardWithName:@"ArtSignPro" bundle:artSignProBundle];
+UIViewController * viewController =  [artSignProStoryBoard instantiateViewControllerWithIdentifier:@"ExpertSignListViewController"];
+[self showViewController:viewController sender:self];
+}else{
+NSLog(@"set pay method for this production before show expert sign list");
+}
 }
 ```
 
@@ -215,7 +220,59 @@ Referenced ID  >> ExpertSignListViewController
 Bundle         >> org.cocoapods.ArtSignProSdk
 ```
 
+> ViewController **Must** embed in UINavigationController
 
+### For Portrait Only
+
+#### 1.  NavigationViewController.h > Add New NavigationViewController
+
+New a NavigationViewController extend UINavigationController
+
+```Objective-C
+#import <UIKit/UIKit.h>
+
+@interface NavigationViewController : UINavigationController
+
+@end
+```
+
+#### 2.  NavigationViewController.m > Override some functions
+
+New a NavigationViewController extend UINavigationController , override 3 functions
+
+```Objective-C
+#import "NavigationViewController.h"
+
+@interface NavigationViewController ()
+
+@end
+
+@implementation NavigationViewController
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation{
+return toInterfaceOrientation != UIDeviceOrientationPortraitUpsideDown;
+}
+
+- (BOOL)shouldAutorotate{
+// if your ViewController don't support Landscape , return NO
+if ([self.topViewController isKindOfClass:[ViewController class]]) {
+return NO;
+}
+return YES;
+}
+
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+@end
+```
+
+> In **shouldAutorotate** function , add the ViewControllers which don't supprot landspace
+
+[0]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC/raw/master/doc/icon.png
 [1]: http://business.test.qima.tech/
 [2]: http://business.qima.tech/
 [3]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC#prepare
+[4]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC#For%20Portrait%20Only
+[5]: http://cocoapods.org

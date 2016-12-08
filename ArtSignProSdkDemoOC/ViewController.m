@@ -19,11 +19,11 @@ bool isShowSdk = false;
     [self.delegate.artsignpro isShowSdkWithDelegate:self];
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)onClick:(UIButton *)sender {
     if (isShowSdk) {
         // if you use storyboard , you can show ArtSignPro with the follow code
@@ -41,6 +41,5 @@ bool isShowSdk = false;
 -(void)isShowSdkWithShow:(BOOL)show{
     isShowSdk = show;
 }
-
 
 @end
