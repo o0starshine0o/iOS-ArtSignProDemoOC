@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "708E6AF5442441A26307A21D20232114C144F683",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4DE5D8113295A05A8A3C1ACE70CFA8422A52C7DB" : 9223372036854775807,
+    "708E6AF5442441A26307A21D20232114C144F683" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "87CE3405-4D92-4811-BBF5-F0CF126E5A78",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4DE5D8113295A05A8A3C1ACE70CFA8422A52C7DB" : "ArtSignPro-Sdk\/",
+    "708E6AF5442441A26307A21D20232114C144F683" : "iOS-ArtSignProDemoOC\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ArtSignProSdkDemoOC",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ArtSignProSdkDemoOC.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o0starshine0o\/iOS-ArtSignPro_Sdk.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4DE5D8113295A05A8A3C1ACE70CFA8422A52C7DB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:o0starshine0o\/iOS-ArtSignProDemoOC.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "708E6AF5442441A26307A21D20232114C144F683"
+    }
+  ]
+}

@@ -268,6 +268,16 @@ return UIInterfaceOrientationMaskAllButUpsideDown;
 @end
 ```
 
+### Optional
+
+#### 1.  Set Pan Width
+
+```Objective-C
+[self.artsignpro setPanWidthWithMin:ArtSignPro.MinPan max:ArtSignPro.MaxPan start:2];
+```
+
+> attention : min < start < max
+
 > In **shouldAutorotate** function , add the ViewControllers which don't supprot landspace
 
 [0]: https://github.com/o0starshine0o/iOS-ArtSignProDemoOC/raw/master/doc/icon.png

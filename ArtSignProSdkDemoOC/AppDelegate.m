@@ -15,7 +15,7 @@
     // Override point for customization after application launch.
     self.artsignpro = [[ArtSignPro alloc] initWithKey:@"key_XXX" secret:@"secret_XXX" scheme:@"ArtSignProSdkDemoOC"];
     [self.artsignpro setEnvironmentWithEnvironment:EnvironmentTypeTest];
-    [self.artsignpro setPanWidthWithWidth:10];
+    [self.artsignpro setPanWidthWithMin:ArtSignPro.MinPan max:ArtSignPro.MaxPan start:2];
     return YES;
 }
 
